@@ -10,7 +10,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠</text></svg>">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠</text></svg>">
+<meta name="theme-color" content="#0d1117">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Create beautiful CSS gradients with live preview. Linear, radial, and conic gradients.">
     <meta name="keywords" content="CSS gradient, gradient generator, linear gradient, radial gradient, background gradient">
     <meta property="og:title" content="Gradient Generator — DevKit Tools">
@@ -209,7 +211,7 @@
 <button id="copy-css" style="margin-top:8px;">Copy CSS</button>
 
             <script>
-
+'use strict';
 const type = document.getElementById('grad-type');
 const color1 = document.getElementById('color1');
 const color2 = document.getElementById('color2');
@@ -246,8 +248,7 @@ document.getElementById('copy-css').addEventListener('click', () => {
     setTimeout(() => btn.textContent = 'Copy CSS', 1500);
 });
 update();
-
-            </script>
+</script>
             </div>
         </div>
     </div>
@@ -257,13 +258,14 @@ update();
         © 2026 DevKit Tools
     </div>
     <script>
-    function copyText(text, btn) {
+'use strict';
+function copyText(text, btn) {
         navigator.clipboard.writeText(text).then(() => {
             var orig = btn.textContent;
             btn.textContent = 'Copied!';
             setTimeout(() => btn.textContent = orig, 1500);
         });
     }
-    </script>
+</script>
 </body>
 </html>
